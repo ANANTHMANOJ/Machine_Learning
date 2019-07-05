@@ -33,7 +33,7 @@ tsds=tsds.map(normalize)
 
 pt.Figure(figsize=(10,10))
 i=10
-for (image,label) in tsds(25):
+for (image,label) in tsds.take(25):
   image=image.numpy().reshape((28,28))
   pt.subplot(5,5,i+1)
   pt.xticks([])
